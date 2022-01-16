@@ -9,7 +9,7 @@
 </head>
 <body>
     
-    <h2>Form</h2>
+  
 
 <form id="my_form">
 	
@@ -91,6 +91,80 @@
 
 
 
+	<label for="name">नक्षत्र - </label>
+	<input type="text" id="naxx" name="नक्षत्र" value="" placeholder="नक्षत्र">
+	<br>
+
+
+
+	
+	<label for="name">चंद्र राशि - </label>
+	<input type="text" id="chand" name="चंद्र राशि" value="" placeholder="चंद्र राशि">
+	<br>
+
+
+	<label for="name">योग - </label>
+	<input type="text" id="yog" name="योग" value="" placeholder="योग">
+	<br>
+	
+	
+	<label for="name">करण - </label>
+	<input type="text" id="kran" name="करण" value="" placeholder="करण">
+	<br>
+
+	<label for="name">सूर्योदय - </label>
+	<input type="time" id="appt" name="appt">
+	<br>
+
+	<label for="name">सूर्यास्त - </label>
+	<input type="time" id="apptT" name="apptT">
+	<br>
+
+
+	
+	<label for="name">चंद्रोदय - </label>
+	<input type="time" id="chn1" name="chn1">
+	<br>
+
+	<label for="name">चंद्रास्त - </label>
+	<input type="time" id="chn2" name="chn2">
+	<br>
+
+
+	<label for="name">राहुकाल - </label>
+	<input type="text" id="rhu" name="राहुकाल" value="" placeholder="राहुकाल">
+	<br>
+
+
+	
+	<label for="name">अभिजित - </label>
+	<input type="text" id="abhi" name="अभिजित" value="" placeholder="अभिजित">
+	<br>
+
+
+	<label for="name">पंचक - </label>
+	<input type="text" id="panc" name="पंचक" value="" placeholder="पंचक">
+	<br>
+
+
+
+	
+
+
+	<div class="mdl-selectfield">
+		<span>
+			दिशाशूल - <select id="DISHA" name="DISHA">
+				<option class='short' data-limit='15' value="पूर्व दिशा">पूर्व दिशा</option>
+				<option class='short' data-limit='15' value="पश्चिम दिशा">पश्चिम दिशा</option>			
+				<option class='short' data-limit='15' value="उत्तर दिशा">उत्तर दिशा</option>			
+				<option class='short' data-limit='15' value="दक्षिण दिशा">दक्षिण दिशा</option>		
+								
+			</select>
+		</span>
+	</div>
+
+
+
 	<!-- <label for="name">First name: </label>
 	<input type="text" id="name" name="Firstname" value="" placeholder="Your name here...">
 	<br>
@@ -129,15 +203,23 @@
 	</div> -->
 	<br>
 	<!-- <input type="submit" value="Submit" title="Get form's query-string"> -->
-	<button type="submit" value="Submit" title="Get form's query-string">Submit</button>
+	<button type="submit" value="Submit" title="Get form's query-string" class="sub_btn" >Submit</button>
    
 </form>
 
-<span id="check_before_submit"></span>
+
+
+<span id="check_before_submit">
+
+</span>
 
 <div class="center"></div>
 
 
+<!-- developer Devraj jangid 8490095411 
+	if you are any qustion then mail me 
+	devrajjangid98@gmail.com
+-->
 
 
 
@@ -221,7 +303,7 @@ $(function () {
 	$("#my_form").on("submit", function (event) {
 		event.preventDefault();
 		var str =
-		'<div class="centr">श्री देवनारायण ज्योतिष  गिलूण्ड सुरत</div><br>'+
+		'<div class="centr"><b>श्री देवनारायण ज्योतिष  गिलूण्ड सुरत</b></div><br>'+
 		"विक्रम संवत - 2078<br>"+
 		"शक संवत - 1943<br>"+
 		"अयन - " +
@@ -250,18 +332,87 @@ $(function () {
 			$("select#vaar option:selected").text() +
 
 
+			"<br>नक्षत्र -  " +
+			$("#naxx").val() +
 
 
-			"</strong><br><em>Last name:</em><strong> " +
-			$("#surname").val() +
 
-            "</strong><br><em>tithi:</em><strong> " +
-			$("#tithi").val() +
+			"<br>चंद्र राशि -  " +
+			$("#chand").val() +
+
+			"<br>योग -  " +
+			$("#yog").val() +
+
+			"<br>करण -  " +
+			$("#kran").val() +
+
+			"<br>सूर्योदय -  " +
+			$("#appt").val() +
+
+			"<br>सूर्यास्त -  " +
+			$("#apptT").val() +
+
+
+
+
+			"<br>चंद्रोदय -  " +
+			$("#chn1").val() +
+
+			"<br>चंद्रास्त -  " +
+			$("#chn2").val() +
+
+
+			"<br>राहुकाल -  " +
+			$("#rhu").val() +
+
+
+			"<br>अभिजित -  " +
+			$("#abhi").val() +
+
+
+			"<br>पंचक -  " +
+			$("#panc").val() +
+
+
+			"<br>दिशाशूल - " +
+			$("select#DISHA option:selected").text() +
+
+
 
 			
-			"</strong><br><em>My country:</em><strong> " +
+			"<br><br><b>डाॅ.कैलाश शर्मा</b><br>"+
+			
+			
+
+			
+			
+
+
+
+
+
+
+
+
+
+
+
+
+			// "</strong><br><em>Last name:</em><strong> " +
+			// $("#surname").val() +
+
+            // "</strong><br><em>tithi:</em><strong> " +
+			// $("#tithi").val() +
+
+			
+			"</strong><br><em></em><strong> " +
 			$("select#countries option:selected").text() +
 			"</strong>";
+
+
+
+		
+
 		// var str =
 		// 	"<em>First name:</em><strong> " +
 		// 	$("#name").val() +
