@@ -24,7 +24,7 @@
 
 	<div class="mdl-selectfield">
 		<span>
-			अयन - <select id="Ritu" name="Ritu">
+			ऋतु - <select id="Ritu" name="Ritu">
 				<option class='short' data-limit='15' value="वसंत ऋतु">वसंत ऋतु</option>
 				<option class='short' data-limit='15' value="ग्रीष्म ऋतु">ग्रीष्म ऋतु</option>
 				<option class='short' data-limit='15' value="वर्षा ऋतु">वर्षा ऋतु</option>
@@ -68,6 +68,12 @@
 			</select>
 		</span>
 	</div>
+	<br>
+
+
+	<label for="name">दिनांक - </label>
+	<input type="date" id="theDate">
+	<br>
 
 
 	<label for="name">तिथी - </label>
@@ -122,13 +128,13 @@
 
 
 	
-	<label for="name">चंद्रोदय - </label>
+	<!-- <label for="name">चंद्रोदय - </label>
 	<input type="time" id="chn1" name="chn1">
 	<br>
 
 	<label for="name">चंद्रास्त - </label>
 	<input type="time" id="chn2" name="chn2">
-	<br>
+	<br> -->
 
 
 	<label for="name">राहुकाल - </label>
@@ -164,6 +170,64 @@
 	</div>
 
 
+	
+	<p>दिन का चौघड़िया</p>
+	<label for="name">शुभ - </label>
+	<input type="text" id="ch1" name="शुभ" value="" placeholder="शुभ">
+	<br>
+
+	<label for="name">चंचल - </label>
+	<input type="text" id="ch2" name="चंचल" value="" placeholder="चंचल">
+	<br>
+
+	<label for="name">लाभ - </label>
+	<input type="text" id="ch3" name="लाभ" value="" placeholder="लाभ">
+	<br>
+
+	<label for="name">अमृत - </label>
+	<input type="text" id="ch4" name="अमृत" value="" placeholder="अमृत">
+	<br>
+
+	<label for="name">रोग - </label>
+	<input type="text" id="ch5" name="रोग" value="" placeholder="रोग">
+	<br>
+
+	<label for="name">उद्वेग - </label>
+	<input type="text" id="ch6" name="उद्वेग" value="" placeholder="उद्वेग">
+	<br>
+
+
+
+
+
+	<p>रात्रि का चौघड़िया</p>
+	<label for="name">शुभ - </label>
+	<input type="text" id="ch7" name="शुभ" value="" placeholder="शुभ">
+	<br>
+
+	<label for="name">चंचल - </label>
+	<input type="text" id="ch8" name="चंचल" value="" placeholder="चंचल">
+	<br>
+
+	<label for="name">लाभ - </label>
+	<input type="text" id="ch9" name="लाभ" value="" placeholder="लाभ">
+	<br>
+
+	<label for="name">अमृत - </label>
+	<input type="text" id="ch10" name="अमृत" value="" placeholder="अमृत">
+	<br>
+
+	<label for="name">रोग - </label>
+	<input type="text" id="ch11" name="रोग" value="" placeholder="रोग">
+	<br>
+
+	<label for="name">उद्वेग - </label>
+	<input type="text" id="ch12" name="उद्वेग" value="" placeholder="उद्वेग">
+	<br>
+
+
+
+	
 
 	<!-- <label for="name">First name: </label>
 	<input type="text" id="name" name="Firstname" value="" placeholder="Your name here...">
@@ -209,8 +273,10 @@
 
 
 
-<span id="check_before_submit">
+<span id="check_before_submit" class="dsdsdsfsdf">
 
+
+	
 </span>
 
 <div class="center"></div>
@@ -224,8 +290,34 @@
 
 
 
+
+
 <script src="jquery.min.js"></script>
 <script>
+
+
+
+
+
+
+
+
+var date = new Date();
+
+var day = date.getDate();
+var month = date.getMonth() + 1;
+var year = date.getFullYear();
+
+if (month < 10) month = "0" + month;
+if (day < 10) day = "0" + day;
+
+var today = year + "-" + month + "-" + day;
+document.getElementById('theDate').value = today;
+
+
+
+
+
 function shortString() {
 	var shorts = document.querySelectorAll(".short");
 	if (shorts) {
@@ -303,7 +395,7 @@ $(function () {
 	$("#my_form").on("submit", function (event) {
 		event.preventDefault();
 		var str =
-		'<div class="centr"><b>श्री देवनारायण ज्योतिष  गिलूण्ड सुरत</b></div><br>'+
+		'<div class="centr"><b>श्री देवनारायण ज्योतिष & वास्तु सुरत & गिलूण्ड</b></div><br>'+
 		"विक्रम संवत - 2078<br>"+
 		"शक संवत - 1943<br>"+
 		"अयन - " +
@@ -322,6 +414,9 @@ $(function () {
 			"<br>पक्ष - " +
 			$("select#paks option:selected").text() +
 
+
+			"<br>दिनांक -  " +
+			$("#theDate").val() +
 
 
 			"<br>तिथी -  " +
@@ -355,11 +450,11 @@ $(function () {
 
 
 
-			"<br>चंद्रोदय -  " +
-			$("#chn1").val() +
+			// "<br>चंद्रोदय -  " +
+			// $("#chn1").val() +
 
-			"<br>चंद्रास्त -  " +
-			$("#chn2").val() +
+			// "<br>चंद्रास्त -  " +
+			// $("#chn2").val() +
 
 
 			"<br>राहुकाल -  " +
@@ -377,10 +472,70 @@ $(function () {
 			"<br>दिशाशूल - " +
 			$("select#DISHA option:selected").text() +
 
+			"<br><br>दिन का चौघड़िया"+
+
+			"<br>शुभ -  " +
+			$("#ch1").val() +
+
+			"<br>चंचल -  " +
+			$("#ch2").val() +
+
+
+			"<br>लाभ -  " +
+			$("#ch3").val() +
+
+
+			"<br>अमृत -  " +
+			$("#ch4").val() +
+
+
+			"<br>रोग -  " +
+			$("#ch5").val() +
+
+			"<br>उद्वेग -  " +
+			$("#ch6").val() +
+
+
+
+
+
+
+			"<br><br>रात्रि का चौघड़िया"+
+
+			"<br>शुभ -  " +
+			$("#ch7").val() +
+
+			"<br>चंचल -  " +
+			$("#ch8").val() +
+
+
+			"<br>लाभ -  " +
+			$("#ch9").val() +
+
+
+			"<br>अमृत -  " +
+			$("#ch10").val() +
+
+
+			"<br>रोग -  " +
+			$("#ch11").val() +
+
+			"<br>उद्वेग -  " +
+			$("#ch12").val() +
+
+
 
 
 			
-			"<br><br><b>डाॅ.कैलाश शर्मा</b><br>"+
+
+			
+
+
+
+			
+
+			
+			"<br><br><b>डाॅ.कैलाश शर्मा</b><br><b>9537106802</b></b><br><b>7016825147</b><br>"+
 			
 			
 
@@ -410,7 +565,7 @@ $(function () {
 			"</strong>";
 
 
-
+			
 		
 
 		// var str =
@@ -426,6 +581,8 @@ $(function () {
 		// 	$(this).serialize() +
 		// 	"</strong>";
 			 // the query-string will use the "name" attribute as key and the "value" attribute as value
+
+			 
 
 		$("#check_before_submit").html(str);
 	});
