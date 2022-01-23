@@ -32,32 +32,6 @@
 		</span>
 	</div>
 
-
-	
-	<div class="mdl-selectfield">
-		<span>
-			अयन - <select id="cars" name="Cars">
-				<option class='short' data-limit='10' value="दक्षिणायन">दक्षिणायन</option>
-				<option class='short' data-limit='10' value="उत्तरायण">उत्तरायण</option>				
-			</select>
-		</span>
-	</div>
-
-	<div class="mdl-selectfield">
-		<span>
-			ऋतु - <select id="Ritu" name="Ritu">
-				<option class='short' data-limit='15' value="वसंत ऋतु">वसंत ऋतु</option>
-				<option class='short' data-limit='15' value="ग्रीष्म ऋतु">ग्रीष्म ऋतु</option>
-				<option class='short' data-limit='15' value="वर्षा ऋतु">वर्षा ऋतु</option>
-				<option class='short' data-limit='15' value="शरद ऋतु">शरद ऋतु</option>
-				<option class='short' data-limit='15' value="हेमंत ऋतु">हेमंत ऋतु</option>
-				<option class='short' data-limit='15' value="शीत ऋतु">शीत ऋतु</option>
-				
-			</select>
-		</span>
-	</div>
-
-
 	<div class="mdl-selectfield">
 		<span>
 			माह - <select id="mnth" name="mnth">
@@ -80,6 +54,16 @@
 	</div>
 
 
+
+	<label for="name">अमावस्यांत - </label>
+	<input type="text" id="ama" name="अमावस्यांत" value="" placeholder="अमावस्यांत">
+	<br>
+
+	<label for="name">पूर्णिमांत - </label>
+	<input type="text" id="pnp" name="पूर्णिमांत " value="" placeholder="पूर्णिमांत ">
+	<br>
+
+
 	<div class="mdl-selectfield">
 		<span>
 			पक्ष - <select id="paks" name="paks">
@@ -91,39 +75,18 @@
 	</div>
 	<br>
 
-
-	
-
-
 	<label for="name">तिथी - </label>
 	<input type="text" id="name" name="तिथी" value="" placeholder="तिथी">
 	<br>
 
-
-	
-
-
-
-	<label for="name">नक्षत्र - </label>
-	<input type="text" id="naxx" name="नक्षत्र" value="" placeholder="नक्षत्र">
-	<br>
-
-
-
-	
-	<label for="name">चंद्र राशि - </label>
-	<input type="text" id="chand" name="चंद्र राशि" value="" placeholder="चंद्र राशि">
-	<br>
-
-
-	<label for="name">योग - </label>
-	<input type="text" id="yog" name="योग" value="" placeholder="योग">
-	<br>
-	
-	
-	<label for="name">करण - </label>
-	<input type="text" id="kran" name="करण" value="" placeholder="करण">
-	<br>
+	<div class="mdl-selectfield">
+		<span>
+			सूर्य (रवि) - <select id="cars" name="Cars">
+				<option class='short' data-limit='10' value="दक्षिणायन">दक्षिणायन</option>
+				<option class='short' data-limit='10' value="उत्तरायण">उत्तरायण</option>				
+			</select>
+		</span>
+	</div>
 
 	<label for="name">सूर्योदय - </label>
 	<input type="time" id="appt" name="appt">
@@ -133,16 +96,44 @@
 	<input type="time" id="apptT" name="apptT">
 	<br>
 
-
-	
-	<!-- <label for="name">चंद्रोदय - </label>
-	<input type="time" id="chn1" name="chn1">
+	<label for="name">नक्षत्र - </label>
+	<input type="text" id="naxx" name="नक्षत्र" value="" placeholder="नक्षत्र">
 	<br>
 
-	<label for="name">चंद्रास्त - </label>
-	<input type="time" id="chn2" name="chn2">
-	<br> -->
+	<label for="name">योग - </label>
+	<input type="text" id="yog" name="योग" value="" placeholder="योग">
+	<br>	
+	
+	<label for="name">करण - </label>
+	<input type="text" id="kran" name="करण" value="" placeholder="करण">
+	<br>
 
+
+
+
+
+
+
+	<div class="mdl-selectfield">
+		<span>
+			ऋतु - <select id="Ritu" name="Ritu">
+				<option class='short' data-limit='15' value="वसंत ऋतु">वसंत ऋतु</option>
+				<option class='short' data-limit='15' value="ग्रीष्म ऋतु">ग्रीष्म ऋतु</option>
+				<option class='short' data-limit='15' value="वर्षा ऋतु">वर्षा ऋतु</option>
+				<option class='short' data-limit='15' value="शरद ऋतु">शरद ऋतु</option>
+				<option class='short' data-limit='15' value="हेमंत ऋतु">हेमंत ऋतु</option>
+				<option class='short' data-limit='15' value="शीत ऋतु">शीत ऋतु</option>
+				
+			</select>
+		</span>
+	</div>
+
+
+	
+
+	<label for="name">चंद्र राशि - </label>
+	<input type="text" id="chand" name="चंद्र राशि" value="" placeholder="चंद्र राशि">
+	<br>
 
 	<label for="name">राहुकाल - </label>
 	<input type="text" id="rhu" name="राहुकाल" value="" placeholder="राहुकाल">
@@ -160,8 +151,17 @@
 	<br>
 
 
-
+	<label for="name">करण - </label>
+	<input type="text" id="krn" name="करण" value="" placeholder="करण">
+	<br>
 	
+
+
+	<label for="name">त्योहार - </label>
+	<input type="text" id="tyo" name="त्योहार" value="" placeholder="त्योहार">
+	<br>
+
+
 
 
 	<div class="mdl-selectfield">
@@ -245,44 +245,15 @@
 
 	
 
-	<!-- <label for="name">First name: </label>
-	<input type="text" id="name" name="Firstname" value="" placeholder="Your name here...">
+
+
+
+
+
+
+
 	<br>
-	<label for="surname">Last name: </label>
-	<input type="text" id="surname" name="Lastname" value="" placeholder="Your surname here...">
-	<br>
-    <label for="tithi">tithi </label>
-	<input type="text" id="tithi" name="tithi" value="" placeholder="tithi...">
-	<br> -->
-
-
-
-
-
-
-	<!-- <div class="mdl-selectfield">
-		<span>
-			My car: <select id="cars" name="Cars">
-				<option class='short' data-limit='8' value="Volvo">Volvo</option>
-				<option class='short' data-limit='8' value="Saab">Saab</option>
-				<option class='short' data-limit='8' value="Fiat">Fiat</option>
-				<option class='short' data-limit='8' value="Audi">Audi</option>
-			</select>
-		</span>
-	</div>
-
-	<div class="mdl-selectfield">
-		<span>
-			My country: <select id="countries" name="Countries">
-				<option class='short' data-limit='8' value="USA">USA</option>
-				<option class='short' data-limit='8' value="UK">UK</option>
-				<option class='short' data-limit='8' value="Spain">Spain</option>
-				<option class='short' data-limit='8' value="Italy">Italy</option>
-			</select>
-		</span>
-	</div> -->
-	<br>
-	<!-- <input type="submit" value="Submit" title="Get form's query-string"> -->
+	
 	<button type="submit" value="Submit" title="Get form's query-string" class="sub_btn" >Submit</button>
 
 
@@ -441,11 +412,12 @@ $(function () {
 		"माह - " +
 			$("select#mnth option:selected").text() +
 
+			
+			"<br>अमावस्यांत -  " +
+			$("#ama").val() +
 
-
-
-
-
+			"<br>पूर्णिमांत -  " +
+			$("#pnp").val() +
 
 			"<br>पक्ष - " +
 			$("select#paks option:selected").text() +
@@ -453,6 +425,13 @@ $(function () {
 			
 			"<br>तिथी -  " +
 			$("#name").val() +
+
+
+			"<br>सूर्य (रवि)- " +
+			$("select#cars option:selected").text() +
+		
+
+			
 
 			"<br>सूर्योदय -  " +
 			$("#appt").val() +
@@ -469,15 +448,13 @@ $(function () {
 			"<br>करण -  " +
 			$("#kran").val() +
 
-
-			"<br>पंचक -  " +
-			$("#panc").val() +
-
-			"<br>अयन - " +
-			$("select#cars option:selected").text() +
-
 			"<br>ऋतु - " +
 			$("select#Ritu option:selected").text() +
+
+			"<br>पंचक -  " +
+			$("#panc").val() +		
+
+			
 
 			"<br>चंद्र राशि -  " +
 			$("#chand").val() +			
@@ -492,6 +469,15 @@ $(function () {
 
 			"<br>दिशाशूल - " +
 			$("select#DISHA option:selected").text() +
+
+			
+			"<br>करण -  " +
+			$("#krn").val() +
+
+			"<br>त्योहार -  " +
+			$("#tyo").val() +
+
+			
 
 
 
@@ -546,7 +532,8 @@ $(function () {
 
 
 			
-			"<br><br><b>डाॅ.कैलाश शर्मा</b><br><b>9537106802</b></b><br><b>7016825147</b><br>"+
+			"<br><br><b>आज का दिन सभी के लिए मंगलमय हो</b>"+
+			"<br><b>श्री देवनारायण ज्योतिष & वास्तु केंद्र सूरत & गिलूण्ड  </b><br><b>9537106802</b></b> - <b>7016825147</b><br>"+
 			
 			
 
