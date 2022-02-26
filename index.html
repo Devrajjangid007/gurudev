@@ -151,9 +151,9 @@
 	<br>
 
 
-	<label for="name">करण - </label>
+	<!-- <label for="name">करण - </label>
 	<input type="text" id="krn" name="करण" value="" placeholder="करण">
-	<br>
+	<br> -->
 	
 
 
@@ -177,14 +177,21 @@
 	</div>
 
 
-<!-- 	
+	
 	<p>दिन का चौघड़िया</p>
 	<label for="name">शुभ - </label>
 	<input type="text" id="ch1" name="शुभ" value="" placeholder="शुभ">
+	<input type="time" id="dc1" name="dc1">
+	To
+	<input type="time" id="dc2" name="dc2">
+
 	<br>
 
 	<label for="name">चंचल - </label>
 	<input type="text" id="ch2" name="चंचल" value="" placeholder="चंचल">
+	<input type="time" id="dc3" name="dc3">
+	<input type="time" id="dc4" name="dc4">
+
 	<br>
 
 	<label for="name">लाभ - </label>
@@ -206,7 +213,7 @@
 
 
 
-
+<!-- 
 	<p>रात्रि का चौघड़िया</p>
 	<label for="name">शुभ - </label>
 	<input type="text" id="ch7" name="शुभ" value="" placeholder="शुभ">
@@ -471,8 +478,8 @@ $(function () {
 			$("select#DISHA option:selected").text() +
 
 			
-			"<br>करण -  " +
-			$("#krn").val() +
+			// "<br>करण -  " +
+			// $("#krn").val() +
 
 			"<br>त्योहार -  " +
 			$("#tyo").val() +
@@ -483,28 +490,33 @@ $(function () {
 
 
 
-			// "<br><br>दिन का चौघड़िया"+
+			 "<br><br>दिन का चौघड़िया"+
 
-			// "<br>शुभ -  " +
-			// $("#ch1").val() +
-
-			// "<br>चंचल -  " +
-			// $("#ch2").val() +
-
-
-			// "<br>लाभ -  " +
-			// $("#ch3").val() +
+			 "<br>शुभ -  " +
+			 $("#ch1").val() +
+			 $("#dc1").val()+'To'
+			 $("#dc2").val()+
 
 
-			// "<br>अमृत -  " +
-			// $("#ch4").val() +
+
+			 "<br>चंचल -  " +
+			 $("#ch2").val() +
+			 $("dc3").val()
 
 
-			// "<br>रोग -  " +
-			// $("#ch5").val() +
+			 "<br>लाभ -  " +
+			 $("#ch3").val() +
 
-			// "<br>उद्वेग -  " +
-			// $("#ch6").val() +
+
+			 "<br>अमृत -  " +
+			 $("#ch4").val() +
+
+
+			 "<br>रोग -  " +
+			 $("#ch5").val() +
+
+			 "<br>उद्वेग -  " +
+			 $("#ch6").val() +
 
 
 			// "<br><br>रात्रि का चौघड़िया"+
